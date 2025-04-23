@@ -1,0 +1,66 @@
+/* Estilos comuns */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Modo claro */
+.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.light-mode .container {
+    background-color: #fff;
+}
+
+.light-mode button {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Modo escuro */
+.dark-mode {
+    background-color: #181818;
+    color: #f0f0f0;
+}
+
+.dark-mode .container {
+    background-color: #242424;
+}
+
+.dark-mode button {
+    background-color: #555;
+    color: #f0f0f0;
+}
