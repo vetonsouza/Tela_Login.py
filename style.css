@@ -35,6 +35,19 @@ button {
     margin-top: 10px;
 }
 
+/* Ícone de lâmpada no canto superior */
+#lampada {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: yellow; /* Representa a luz da lâmpada */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px yellow;
+}
+
 /* Modo claro */
 .light-mode {
     background-color: #f0f0f0;
@@ -50,6 +63,11 @@ button {
     color: #fff;
 }
 
+.light-mode #lampada {
+    background-color: yellow;
+    box-shadow: 0 0 10px yellow;
+}
+
 /* Modo escuro */
 .dark-mode {
     background-color: #181818;
@@ -63,4 +81,9 @@ button {
 .dark-mode button {
     background-color: #555;
     color: #f0f0f0;
+}
+
+.dark-mode #lampada {
+    background-color: gray;
+    box-shadow: 0 0 10px gray;
 }
