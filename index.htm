@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="light-mode">
+    <!-- Ícone de lâmpada para alternar modos -->
+    <div id="lampada"></div>
+
     <div class="container">
         <h1>Bem-vindo!</h1>
-        <form>
+        <form id="login-form" onsubmit="return verificarLogin()">
             <label for="usuario">Usuário</label>
             <input type="text" id="usuario" placeholder="Digite seu usuário">
 
@@ -18,16 +21,33 @@
 
             <button type="submit">Login</button>
         </form>
-        <button id="toggle-mode">Alternar Modo</button>
     </div>
+
     <script>
-        const toggleButton = document.getElementById('toggle-mode');
+        // Alternar entre modos claro e escuro
+        const toggleButton = document.getElementById('lampada');
         const body = document.body;
 
         toggleButton.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             body.classList.toggle('light-mode');
         });
+
+        // Lógica de verificação de login
+        function verificarLogin() {
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+
+            // Dados de login fixos para teste
+            if (usuario === "admin" && senha === "1234") {
+                // Redirecionar para a página de início
+                window.location.href = "inicio.html";
+                return false; // Evitar o comportamento padrão do formulário
+            } else {
+                alert("Usuário ou senha incorretos!");
+                return false;
+            }
+        }
     </script>
 </body>
 </html>
